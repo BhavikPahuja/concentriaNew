@@ -1,0 +1,135 @@
+body {
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(145deg, #0a0f1e, #111827);
+    color: #d1d5db;
+  }
+  
+  .container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 16px;
+    margin: 12px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #66f2ff;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  
+  .tab {
+    background: transparent;
+    border: 2px solid #00bcd4;
+    color: #00e5ff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+  }
+  .tab:hover,
+  .tab.active {
+    background: #00e5ff33;
+    box-shadow: 0 0 8px #00e5ffaa;
+    transform: scale(0.97);
+  }
+  
+  .section.hidden {
+    display: none;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 12px;
+    background: #1a1f2c;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 229, 255, 0.08);
+  }
+  
+  th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #2f3545;
+  }
+  
+  th {
+    background: #212a3b;
+    color: #66f2ff;
+    font-weight: 600;
+  }
+  
+  tr:nth-child(even) {
+    background: #1e2533;
+  }
+  
+  tr:nth-child(odd) {
+    background: #181e2a;
+  }
+  
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  button {
+    background: #00e5ff22;
+    border: 1.5px solid #00e5ff99;
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.88rem;
+    transition: all 0.25s ease-in-out;
+    backdrop-filter: blur(4px);
+  }
+  button:hover {
+    background: #00e5ff55;
+    box-shadow: 0 0 10px #00e5ff88;
+    transform: scale(0.96);
+  }
+  
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #00e5ff88;
+    border-radius: 3px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+      margin: 6px;
+    }
+    h1 {
+      font-size: 1.2rem;
+    }
+    button {
+      font-size: 0.75rem;
+      padding: 6px 14px;
+    }
+  }
+  

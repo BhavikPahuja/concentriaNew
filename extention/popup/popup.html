@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concentria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🛡️ Concentria</h1>
+      <div class="tabs">
+        <button class="tab active" id="logsTab">📜 Logs</button>
+        <button class="tab" id="cookiesTab">🍪 Cookies</button>
+      </div>
+
+      <div id="logsSection" class="section">
+        <table>
+          <thead>
+            <tr>
+              <th>🕒 Time</th>
+              <th>📍 Type</th>
+              <th>🌐 URL</th>
+            </tr>
+          </thead>
+          <tbody id="logsContent"></tbody>
+        </table>
+        <div class="actions">
+          <button id="downloadLogs">⬇️ Download</button>
+          <button id="clearAllLogs">🧹 Clear</button>
+          <button id="openDashboard">📊 Dashboard</button>
+        </div>
+      </div>
+
+      <div id="cookiesSection" class="section hidden">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+              <th>Domain</th>
+              <th>Path</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="cookiesContent"></tbody>
+        </table>
+        <div class="actions">
+          <button id="downloadCookies">⬇️ Download</button>
+          <button id="deleteAllCookies">🗑️ Clear All</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

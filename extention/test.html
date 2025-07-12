@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>API Monitor Test Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+    }
+    button {
+      margin: 10px 5px;
+      padding: 8px 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔧 Extension Feature Test Page</h1>
+
+  <h2>✂️ Cut / Copy / Paste</h2>
+  <textarea id="textArea">Try cutting, copying, or pasting in this box...</textarea>
+
+  <h2>📍 Geolocation</h2>
+  <button onclick="navigator.geolocation.getCurrentPosition(()=>{})">Request Location</button>
+
+  <h2>📋 Clipboard</h2>
+  <button onclick="navigator.clipboard.writeText('Test clipboard text')">Write to Clipboard</button>
+  <button onclick="navigator.clipboard.readText().then(alert)">Read from Clipboard</button>
+
+  <h2>🎮 Orientation Event</h2>
+  <button onclick="window.addEventListener('deviceorientation', () => {}, { once: true })">
+    Add Orientation Listener
+  </button>
+
+  <h2>🔐 Permissions</h2>
+  <button onclick="navigator.permissions.query({ name: 'geolocation' })">
+    Query Geolocation Permission
+  </button>
+
+  <h2>🎤 Microphone / 📷 Camera</h2>
+  <button onclick="getUserMedia({ audio: true })">Access Microphone</button>
+  <button onclick="getUserMedia({ video: true })">Access Camera</button>
+
+  <h2>📁 Download File</h2>
+  <a href="https://example.com/test-file.txt" download="sample.txt">
+    Download Sample File
+  </a>
+
+  <script>
+    function getUserMedia(constraints) {
+      navigator.mediaDevices.getUserMedia(constraints)
+        .then(stream => {
+          stream.getTracks().forEach(t => t.stop());
+          alert('Access granted');
+        })
+        .catch(err => alert('Access denied: ' + err));
+    }
+  </script>
+</body>
+</html>

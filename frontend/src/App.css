@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes bgMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+@keyframes gradientFlicker {
+  0%,100% { filter: brightness(1); }
+  50% { filter: brightness(1.5) drop-shadow(0 0 8px #00fff7);}
+}
+@keyframes blink {
+  0%,100% { opacity: 1 }
+  50% { opacity: 0 }
+}
+.animate-fadeIn { animation: fadeIn 1.2s ease; }
+.animate-slideUp { animation: slideUp 0.8s cubic-bezier(.4,2,.6,1); }
+.animate-bgMove { animation: bgMove 30s linear infinite; }
+.animate-gradientFlicker { animation: gradientFlicker 2s infinite alternate; }
+.animate-blink { animation: blink 1s steps(2, start) infinite; }
+@keyframes twinkle {
+  0% { opacity: 0.2 }
+  100% { opacity: 0.7 }
+}
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  overflow-x: hidden;
+}
